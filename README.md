@@ -50,7 +50,7 @@ MergeSort<int>::sort(large_array, true, [](int a, int b) -> bool {
 
 As you can see, multi-threading drastically changed the speed of resolving the algorithm without occurring in memory problems. 
 
-I tried to make the program even faster creating as much threads as I could but 4 or 5 threads are optimal for the speed because threads are expensive and creating more than 5 can eventually slow down the process even more so in some cases could be kinda conunterproductive.
+I tried to make the program even faster creating as much threads as I could but 4 or 5 threads are optimal for the speed because threads are expensive and creating more than 5 can eventually slow down the process even more so in some cases could be kinda conunterproductive. I also strongly recommend to use multi-threading only when a large amount of elements are present in an array because as I said earlier, it can slow down the algorithm. 
 
 ## Contributions 
 
