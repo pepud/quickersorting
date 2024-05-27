@@ -67,8 +67,8 @@ private:
                 std::thread left_thread(merge_sort, std::ref(arr), left, mid, std::ref(comp), is_multi_thread, depth + 1);
                 std::thread right_thread(merge_sort, std::ref(arr), mid + 1, right, std::ref(comp), is_multi_thread, depth + 1);
 
-                left_thread.join();
-                right_thread.join();
+                left_thread.detach();
+                right_thread.detach();
             }
             else {
                 merge_sort(arr, left, mid, comp, is_multi_thread, depth + 1);
