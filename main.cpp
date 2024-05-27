@@ -7,7 +7,7 @@
 
 template <typename T>
 std::vector<T> generate_large_array(size_t size) {
-    std::vector<int> arr(size);
+    std::vector<T> arr(size);
     std::random_device rd;
     std::mt19937 gen(rd());
     std::uniform_int_distribution<> dis(1, 1000000);
